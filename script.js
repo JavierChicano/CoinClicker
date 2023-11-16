@@ -1,4 +1,4 @@
-// letiables
+// variables
 let multiplicador = 1;
 let contador = 0;
 let autoClicks = 0;
@@ -127,6 +127,7 @@ clickCenturion.addEventListener('click', () => {
         autoClick();
     }
 });
+
 //Metodo para el autoclick del Tribuno (Aumenta en 7)
 clickTribuno.addEventListener('click', () => {
     if (contador >= costeTribuno) {
@@ -143,6 +144,7 @@ clickTribuno.addEventListener('click', () => {
         autoClick();
     }
 });
+
 //Metodo para el autoclick del Arquero (Aumenta en 10)
 clickArquero.addEventListener('click', () => {
     if (contador >= costeArquero) {
