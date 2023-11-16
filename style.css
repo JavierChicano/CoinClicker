@@ -8,6 +8,9 @@ body {
 #monedaClick {
     height: 200px;
 }
+#monedaClick:active {
+    scale: 1.2;
+}
 #contador{
     font-size: 25px;
     margin: 0px 20px -10px 0px;
@@ -54,6 +57,13 @@ img {
     text-align: center;
     border: 1px solid black;
     margin: 5px; 
+}
+#duplicadorClick:active,
+#legionario:active,
+#centurion:active,
+#tribuno:active,
+#arquero:active{
+    scale:1.2;
 }
 h2 {
     margin-top: -5px;
