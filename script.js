@@ -89,7 +89,7 @@ function autoClick(){
         intervalo = setInterval(() => {
             contador += autoClicks;
             numeroClicks.textContent = `Monedas: ${Math.trunc(contador)}`;
-        }, 100);
+        }, 10);
     }
 }
 
@@ -101,8 +101,8 @@ clickLegionario.addEventListener('click', () => {
         numeroClicks.textContent = `Monedas: ${Math.trunc(contador)}`;
         costeLegionarioVer.textContent = `${costeLegionario}`;
         nivelLegionario++;
-        autoClicks += 0.1;
-        monedasXSegundo = Math.round(autoClicks * 10);
+        autoClicks += 0.01;
+        monedasXSegundo = Math.round(autoClicks * 100);
         monedasSec.textContent = `Monedas por segundo: ${monedasXSegundo}`;
         lvlLegionario.textContent = `Nivel: ${nivelLegionario}`;
 
@@ -119,8 +119,8 @@ clickCenturion.addEventListener('click', () => {
         numeroClicks.textContent = `Monedas: ${Math.trunc(contador)}`;
         costeCenturionVer.textContent = `${costeCenturion}`;
         nivelCenturion++;
-        autoClicks += 0.3;
-        monedasXSegundo = Math.round(autoClicks * 10);
+        autoClicks += 0.03;
+        monedasXSegundo = Math.round(autoClicks * 100);
         monedasSec.textContent = `Monedas por segundo: ${monedasXSegundo}`;
         lvlCenturion.textContent = `Nivel: ${nivelCenturion}`;
 
@@ -136,8 +136,8 @@ clickTribuno.addEventListener('click', () => {
         numeroClicks.textContent = `Monedas: ${Math.trunc(contador)}`;
         costeTribunoVer.textContent = `${costeTribuno}`;
         nivelTribuno++;
-        autoClicks += 0.5;
-        monedasXSegundo = Math.round(autoClicks * 10);
+        autoClicks += 0.05;
+        monedasXSegundo = Math.round(autoClicks * 100);
         monedasSec.textContent = `Monedas por segundo: ${monedasXSegundo}`;
         lvlTribuno.textContent = `Nivel: ${nivelTribuno}`;
 
@@ -153,8 +153,8 @@ clickArquero.addEventListener('click', () => {
         numeroClicks.textContent = `Monedas: ${Math.trunc(contador)}`;
         costeArqueroVer.textContent = `${costeArquero}`;
         nivelArquero++;
-        autoClicks += 0.7;
-        monedasXSegundo = Math.round(autoClicks * 10);
+        autoClicks += 0.07;
+        monedasXSegundo = Math.round(autoClicks * 100);
         monedasSec.textContent = `Monedas por segundo: ${monedasXSegundo}`;
         lvlArquero.textContent = `Nivel: ${nivelArquero}`;
 
@@ -172,8 +172,8 @@ if(contador>=100){
 //Variables
 
 //Costes objetos
-let costeCandado = 1;
-let costeTienda = 1;
+let costeCandado = 10000;
+let costeTienda = 5000;
 let costeMonedaExtra = 1;
 let bandera = false;
 
