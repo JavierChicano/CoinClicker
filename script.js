@@ -70,7 +70,7 @@ clickButton.addEventListener('click', () => {
 multiplicadorClick.addEventListener('click', () => {
     if(contador>=costeFuerza){
         contador=contador-costeFuerza;
-        costeFuerza = Math.trunc(costeFuerza * 1.5);
+        costeFuerza = Math.trunc(costeFuerza+(nivelFuerza*15));
         numeroClicks.textContent = `Monedas: ${Math.trunc(contador)}`;
         costeFuerzaVer.textContent = `${costeFuerza}`;
         multiplicador++;
@@ -93,16 +93,16 @@ function autoClick(){
     }
 }
 
-// Método para el autoclick del Legionario (Aumenta en 3)
+// Método para el autoclick del Legionario (Aumenta en 1)
 clickLegionario.addEventListener('click', () => {
     if (contador >= costeLegionario) {
         contador = contador - costeLegionario;
-        costeLegionario = Math.trunc(costeLegionario * 3);
+        costeLegionario = Math.trunc(costeLegionario +(nivelLegionario*25) );
         numeroClicks.textContent = `Monedas: ${Math.trunc(contador)}`;
         costeLegionarioVer.textContent = `${costeLegionario}`;
         nivelLegionario++;
         autoClicks += 0.1;
-        monedasXSegundo = Math.trunc(autoClicks * 10);
+        monedasXSegundo = Math.round(autoClicks * 10);
         monedasSec.textContent = `Monedas por segundo: ${monedasXSegundo}`;
         lvlLegionario.textContent = `Nivel: ${nivelLegionario}`;
 
@@ -111,16 +111,16 @@ clickLegionario.addEventListener('click', () => {
     }
 });
 
-//Metodo para el autoclick del Centurion (Aumenta en 5)
+//Metodo para el autoclick del Centurion (Aumenta en 3)
 clickCenturion.addEventListener('click', () => {
     if (contador >= costeCenturion) {
         contador = contador - costeCenturion;
-        costeCenturion = Math.trunc(costeCenturion * 5);
+        costeCenturion = Math.trunc(costeCenturion +(nivelCenturion*30));
         numeroClicks.textContent = `Monedas: ${Math.trunc(contador)}`;
         costeCenturionVer.textContent = `${costeCenturion}`;
         nivelCenturion++;
         autoClicks += 0.3;
-        monedasXSegundo = Math.trunc(autoClicks * 10);
+        monedasXSegundo = Math.round(autoClicks * 10);
         monedasSec.textContent = `Monedas por segundo: ${monedasXSegundo}`;
         lvlCenturion.textContent = `Nivel: ${nivelCenturion}`;
 
@@ -128,16 +128,16 @@ clickCenturion.addEventListener('click', () => {
     }
 });
 
-//Metodo para el autoclick del Tribuno (Aumenta en 7)
+//Metodo para el autoclick del Tribuno (Aumenta en 5)
 clickTribuno.addEventListener('click', () => {
     if (contador >= costeTribuno) {
         contador = contador - costeTribuno;
-        costeTribuno = Math.trunc(costeTribuno * 7);
+        costeTribuno = Math.trunc(costeTribuno +(nivelTribuno*35));
         numeroClicks.textContent = `Monedas: ${Math.trunc(contador)}`;
         costeTribunoVer.textContent = `${costeTribuno}`;
         nivelTribuno++;
         autoClicks += 0.5;
-        monedasXSegundo = Math.trunc(autoClicks * 10);
+        monedasXSegundo = Math.round(autoClicks * 10);
         monedasSec.textContent = `Monedas por segundo: ${monedasXSegundo}`;
         lvlTribuno.textContent = `Nivel: ${nivelTribuno}`;
 
@@ -145,16 +145,16 @@ clickTribuno.addEventListener('click', () => {
     }
 });
 
-//Metodo para el autoclick del Arquero (Aumenta en 10)
+//Metodo para el autoclick del Arquero (Aumenta en 7)
 clickArquero.addEventListener('click', () => {
     if (contador >= costeArquero) {
         contador = contador - costeArquero;
-        costeArquero = Math.trunc(costeArquero * 10);
+        costeArquero = Math.trunc(costeArquero +(nivelArquero*40));
         numeroClicks.textContent = `Monedas: ${Math.trunc(contador)}`;
         costeArqueroVer.textContent = `${costeArquero}`;
         nivelArquero++;
         autoClicks += 0.7;
-        monedasXSegundo = Math.trunc(autoClicks * 10);
+        monedasXSegundo = Math.round(autoClicks * 10);
         monedasSec.textContent = `Monedas por segundo: ${monedasXSegundo}`;
         lvlArquero.textContent = `Nivel: ${nivelArquero}`;
 
@@ -172,13 +172,15 @@ if(contador>=100){
 //Variables
 
 //Costes objetos
-let costeCandado = 100000;
-let costeTienda = 50000;
+let costeCandado = 1;
+let costeTienda = 1;
+let costeMonedaExtra = 1;
 let bandera = false;
 
 //Referencias
 const mostrarCandado = document.getElementById('mostrarCandado');
 const comprarTienda = document.getElementById('objetosCandado1');
+const comprarMonedaExtra = document.getElementById('objetosCandado5');
 const tienda = document.getElementById('tienda');
 
 
@@ -191,6 +193,7 @@ const iconoDudas = document.getElementById('dudas');
 //Referencias costes
 const costeCandadoVer = document.getElementById('costeCandado');
 const costeTiendaVer = document.getElementById('costeTienda');
+const costeMonedaExtraVer = document.getElementById('costeMonedaExtra');
 
 //Desbloqueo del candado
 costeCandadoVer.textContent = `${costeCandado/1000}K`;
@@ -247,4 +250,15 @@ iconoDudas.addEventListener('click', () => {
         }
     }
     
+});
+
+//Desbloqueo de la moneda extra
+costeMonedaExtraVer.textContent = `${costeMonedaExtra/1000}K`;
+comprarMonedaExtra.addEventListener('click', () => {
+    if (contador >= costeMonedaExtra) {
+        contador = contador - costeMonedaExtra;
+        numeroClicks.textContent = `Monedas: ${Math.trunc(contador)}`;
+
+        comprarMonedaExtra.style.display = 'none';
+    }
 });
