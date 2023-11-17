@@ -166,3 +166,85 @@ clickArquero.addEventListener('click', () => {
 if(contador>=100){
     clickButton.src = "img/nivel 1/1.png";
 }
+
+//Seccion dos del html
+
+//Variables
+
+//Costes objetos
+let costeCandado = 100000;
+let costeTienda = 50000;
+let bandera = false;
+
+//Referencias
+const mostrarCandado = document.getElementById('mostrarCandado');
+const comprarTienda = document.getElementById('objetosCandado1');
+const tienda = document.getElementById('tienda');
+
+
+//Referencias para ocultar
+const mostrarElemento = document.getElementsByClassName('cuadroTexto');
+const ocultarCoste = document.getElementsByClassName('coste');
+const iconoDudas = document.getElementById('dudas');
+
+
+//Referencias costes
+const costeCandadoVer = document.getElementById('costeCandado');
+const costeTiendaVer = document.getElementById('costeTienda');
+
+//Desbloqueo del candado
+costeCandadoVer.textContent = `${costeCandado/1000}K`;
+mostrarCandado.addEventListener('click', () => {
+    if (contador >= costeCandado) {
+        contador = contador - costeCandado;
+        numeroClicks.textContent = `Monedas: ${Math.trunc(contador)}`;
+
+        // Oculta el candado al hacer clic
+        mostrarCandado.style.display = 'none';
+    }
+});
+
+//Desbloqueo de la tienda
+costeTiendaVer.textContent = `${costeTienda/1000}K`;
+comprarTienda.addEventListener('click', () => {
+    if (contador >= costeTienda) {
+        contador = contador - costeTienda;
+        numeroClicks.textContent = `Monedas: ${Math.trunc(contador)}`;
+
+        // Oculta el candado al hacer clic
+        tienda.style.display = 'block';
+        comprarTienda.style.display = 'none';
+    }
+});
+
+//Mostrar informacion de los items
+iconoDudas.addEventListener('click', () => {
+    if(bandera==false){
+        bandera=true;
+        lvlFuerza.style.display = 'none';    
+        lvlLegionario.style.display = 'none';
+        lvlCenturion.style.display = 'none';
+        lvlTribuno.style.display = 'none';
+        lvlArquero.style.display = 'none';  
+        for (let i = 0; i < ocultarCoste.length; i++) {
+            ocultarCoste[i].style.display = 'none';
+        }  
+        for (let i = 0; i < mostrarElemento.length; i++) {
+            mostrarElemento[i].style.display = 'block';
+        }
+    }else if(bandera==true){
+        bandera=false;
+        lvlFuerza.style.display = 'block';    
+        lvlLegionario.style.display = 'block';
+        lvlCenturion.style.display = 'block';
+        lvlTribuno.style.display = 'block';
+        lvlArquero.style.display = 'block';  
+        for (let i = 0; i < ocultarCoste.length; i++) {
+            ocultarCoste[i].style.display = 'block';
+        }  
+        for (let i = 0; i < mostrarElemento.length; i++) {
+            mostrarElemento[i].style.display = 'none';
+        }
+    }
+    
+});

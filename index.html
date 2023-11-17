@@ -8,12 +8,32 @@
     <title>Coin Clicker</title>
 </head>
     <main>
-        <h1>Conviertete en millonario</h1>
-        <img src="img/nivel 1/coin1.png" id="monedaClick"></img>
-        <aside class="informacionMonedas"> 
-            <p id="contador"></p>
-            <p id="MonedasSec"></p>
-        </aside>
+        <!--Titulo inicial-->
+        <h1>Conviertete en millonario
+            <img src="img/interrogacion.png" id="dudas"></img>
+        </h1>
+        <!--Primera seccion-->
+        <section id="seccion1">
+            <div class="contenedorCoin">
+                <img src="img/nivel 1/coin1.png" id="monedaClick"></img>
+                <aside class="informacionMonedas"> 
+                    <p id="contador"></p>
+                    <p id="MonedasSec"></p>
+                </aside>
+            </div>
+            <div id="tienda">
+                <section>
+                    <h3>Bienvenido a la tienda de mejoras</h3>
+                    <div class="objetosTienda">
+                        Primera mejora
+                    </div>
+                    <div class="objetosTienda">
+                        Segunda mejora
+                    </div>
+                </section>
+            </div>
+        </section>
+        <!--Seccion objetos compra-->
         <section>
             <div class="contenedor">
                 <div id="duplicadorClick">
@@ -22,15 +42,17 @@
                     <section class="coste">
                         <img src="img/nivel 1/coin1.png" id="monedaClick2" alt="nivel 1/coin1.png"></img>
                         <span id="costeFuerza"></span>
-                    </section>        
+                    </section>  
+                    <div class="cuadroTexto">Incrementa el valor de tu click +1</div>      
                 </div>
                 <div id="legionario">
                     <h2>Legionarios</h2>
                     <p id="levelCountSoldado"></p>
-                    <section class="coste">
+                    <section class="coste" >
                         <img src="img/nivel 1/coin1.png" id="monedaClick2" alt="nivel 1/coin1.png"></img>
                         <span id="costeLegionario"></span>
                     </section>
+                    <div class="cuadroTexto">Aumenta tu produccion de monedas por segundo en +1</div>
                 </div>
                 <div id="centurion">
                     <h2>Centuriones</h2>
@@ -39,23 +61,52 @@
                         <img src="img/nivel 1/coin1.png" id="monedaClick2" alt="nivel 1/coin1.png"></img>
                         <span id="costeCenturion"></span>
                     </section>
+                    <div class="cuadroTexto">Aumenta tu produccion de monedas por segundo en +3</div>
                 </div>
                 <div id="tribuno">
                     <h2>Tribunos</h2>
                     <p id="levelCountTribuno"></p>
-                    <section class="coste">
+                    <section class="coste" >
                         <img src="img/nivel 1/coin1.png" id="monedaClick2" alt="nivel 1/coin1.png"></img>
                         <span id="costeTribuno"></span>
                     </section>
+                    <div class="cuadroTexto">Aumenta tu produccion de monedas por segundo en +5</div>
                 </div>
+                
                 <div id="arquero">
                     <h2>Arqueros</h2>
                     <p id="levelCountArquero"></p>
-                    <section class="coste">
+                    <section class="coste" >
                         <img src="img/nivel 1/coin1.png" id="monedaClick2" alt="nivel 1/coin1.png"></img>
                         <span id="costeArquero"></span>
                     </section>
+                    <div class="cuadroTexto">Aumenta tu produccion de monedas por segundo en +7</div>
+                </div>   
+            </div>
+        </section>
+        <!--Seccion desbloqueables-->
+        <section>
+            <div class="seccion2">
+                <div id="mostrarCandado">
+                    <img src="img/candado.png" id="imgCandado"></img>
+                    <section id="cajaCandado">
+                        <img src="img/nivel 1/coin1.png" id="monedaClick3" alt="nivel 1/coin1.png"></img>
+                        <span id="costeCandado"></span>
+                    </section>  
                 </div>
+                <div id="objetosCandado1">
+                    <h2>Tienda</h2>
+                    <section id="coste2">
+                        <img src="img/nivel 1/coin1.png" id="monedaClick3" alt="nivel 1/coin1.png"></img>
+                        <span id="costeTienda">dsds</span>
+                    </section>
+                </div>
+                <div id="objetosCandado2">
+
+                </div>
+                <div id="objetosCandado3"></div>
+                <div id="objetosCandado4"></div>
+                <div id="objetosCandado5"></div>
             </div>
         </section>
     </main>

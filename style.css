@@ -1,20 +1,45 @@
+:root {
+    --fondo: rgb(222, 184, 135);
+    --principal: rgb(233, 173, 96);
+    --secundario: rgb(197, 111, 0);
+}
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(222, 184, 135);
+    background-color: var(--fondo);
 }
-
+#dudas{
+    position: absolute;
+    height: 70px;
+    margin-top: -20px;
+}
+#dudas:active{
+    scale: 1.2;
+}
 #monedaClick {
     height: 200px;
 }
 #monedaClick:active {
     scale: 1.2;
 }
+
 #contador{
     font-size: 25px;
     margin: 0px 20px -10px 0px;
 }
+#seccion1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contenedorCoin {
+    text-align: center;
+    position: relative;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -22,7 +47,7 @@ main {
 }
 
 aside {
-    background-color: rgb(197, 111, 0);
+    background-color: var(--secundario);
     width: 200px;
     border-radius: 8px;
     margin: 10px;
@@ -34,29 +59,36 @@ img {
 }
 
 .contenedor {
-    background-color: rgb(233, 173, 96);
-    display: flex; /* Cambia de grid a flex */
-    gap: 10px; /* Ajusta el espacio entre los elementos */
-    justify-content: center; /* Centra horizontalmente los elementos */
+    background-color: var(--principal);
+    display: flex; 
+    gap: 10px; 
+    justify-content: center; 
     width: 100%;
-    margin: 10px;
     border-radius: 12px;
     padding: 10px;
 }
-
+.cuadroTexto {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
 #duplicadorClick,
 #legionario,
 #centurion,
 #tribuno,
 #arquero {
-    background-color: rgb(197, 111, 0);
+    background-color: var(--secundario);
     padding: 10px;
     border-radius: 8px;
     width: 120px;
-    height: 60px;
     text-align: center;
     border: 1px solid black;
     margin: 5px; 
+    position: relative;
 }
 #duplicadorClick:active,
 #legionario:active,
@@ -74,4 +106,104 @@ h2 {
     display: flex;
     flex: row;
     justify-content: center;
+}
+.seccion2 {
+    background-color: var(--principal);
+    display: flex; 
+    gap: 10px; 
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+    border-radius: 12px;
+    padding: 10px;
+    position: relative;
+    margin-top: 15px;
+}
+
+#mostrarCandado {
+    /*display: none;*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--secundario);
+    border-radius: 8px;
+    width: inherit;
+    height: 110px;
+    text-align: center;
+}
+#imgCandado{
+    height: 80px;
+}
+#cajaCandado{
+    margin-top: -15px;
+    display: flex;
+    flex: row;
+    justify-content: center;
+}
+#monedaClick3{
+    height: 30px;
+}
+#costeCandado{
+    margin-top: 5px;
+}
+
+#objetosCandado1,
+#objetosCandado2,
+#objetosCandado3,
+#objetosCandado4,
+#objetosCandado5{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secundario);
+    padding: 10px;
+    border-radius: 8px;
+    width: 120px;
+    height: 60px;
+    border: 1px solid black;
+    margin: 5px; 
+}
+#coste2{
+    margin-top: 15px;
+    display: flex;
+    flex: row;
+    justify-content: center;
+}
+#costeTienda{
+    margin-top: 2px;
+    font-size: 20px;
+}
+#objetosTienda:active{
+    scale:1.2;
+}
+#tienda {
+    display: none;
+    position: absolute;
+    margin-left: 700px;
+    height: fit-content;
+    background-color: var(--principal);
+    gap: 10px;
+    justify-content: center;
+    width: 300px;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+h3 {
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 5px;
+    background-color: var(--secundario);
+}
+
+.objetosTienda {
+    background-color: var(--secundario);
+    padding: 10px;
+    border-radius: 8px;
+    width: 120px;
+    text-align: center;
+    border: 1px solid black;
+    margin: 5px;
 }
