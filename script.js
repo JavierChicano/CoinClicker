@@ -165,4 +165,8 @@ clickArquero.addEventListener('click', () => {
 //Gestion de unidades
 if(contador>=100){
     clickButton.src = "img/nivel 1/1.png";
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 9819493fdd6e9e0910ac55305ce86c7b55dcf118
